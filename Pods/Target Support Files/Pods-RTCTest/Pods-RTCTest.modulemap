@@ -1,0 +1,6 @@
+module Pods_RTCTest {
+  umbrella header "Pods-RTCTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

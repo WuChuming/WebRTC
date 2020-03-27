@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController">
+            <connections>
+                <outlet property="addressTF" destination="avf-We-tbw" id="ha6-Jb-f9f"/>
+                <outlet property="roomTF" destination="hQm-si-Kyn" id="YJS-Ki-Na7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://varsiri.com:9902" borderStyle="roundedRect" placeholder="请输入服务器地址" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avf-We-tbw">
+                    <rect key="frame" x="20" y="294" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入服务器地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXN-3U-tKm">
+                    <rect key="frame" x="137.5" y="257" width="139" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="111111" borderStyle="roundedRect" placeholder="请输入要加入的房间" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQm-si-Kyn">
+                    <rect key="frame" x="20" y="373" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入要加入的房间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X06-G6-nJI">
+                    <rect key="frame" x="129" y="336" width="156" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztI-rc-O6u">
+                    <rect key="frame" x="20" y="456" width="374" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.51764705879999995" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="l3U-jO-HmE"/>
+                    </constraints>
+                    <state key="normal" title="进入房间"/>
+                    <connections>
+                        <action selector="loginButtonClick:" destination="-1" eventType="touchUpInside" id="qKA-Dx-7JC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qXN-3U-tKm" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="213" id="4Yi-hl-Vis"/>
+                <constraint firstItem="ztI-rc-O6u" firstAttribute="leading" secondItem="hQm-si-Kyn" secondAttribute="leading" id="7pj-r7-I20"/>
+                <constraint firstItem="X06-G6-nJI" firstAttribute="centerX" secondItem="hQm-si-Kyn" secondAttribute="centerX" id="8vN-lI-V8E"/>
+                <constraint firstItem="ztI-rc-O6u" firstAttribute="trailing" secondItem="hQm-si-Kyn" secondAttribute="trailing" id="L8G-5y-Io7"/>
+                <constraint firstItem="hQm-si-Kyn" firstAttribute="trailing" secondItem="avf-We-tbw" secondAttribute="trailing" id="O1T-ta-CrB"/>
+                <constraint firstItem="avf-We-tbw" firstAttribute="top" secondItem="qXN-3U-tKm" secondAttribute="bottom" constant="16" id="TCO-U8-oly"/>
+                <constraint firstItem="avf-We-tbw" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="Wn6-fb-nCY"/>
+                <constraint firstItem="ztI-rc-O6u" firstAttribute="top" secondItem="hQm-si-Kyn" secondAttribute="bottom" constant="49" id="Y8O-sV-1zY"/>
+                <constraint firstItem="qXN-3U-tKm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="djz-6N-T1s"/>
+                <constraint firstItem="hQm-si-Kyn" firstAttribute="top" secondItem="X06-G6-nJI" secondAttribute="bottom" constant="16" id="dp6-uw-KJM"/>
+                <constraint firstItem="hQm-si-Kyn" firstAttribute="leading" secondItem="avf-We-tbw" secondAttribute="leading" id="vRZ-qr-VdZ"/>
+                <constraint firstItem="qXN-3U-tKm" firstAttribute="centerX" secondItem="avf-We-tbw" secondAttribute="centerX" id="vli-Fq-TDB"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="avf-We-tbw" secondAttribute="trailing" constant="20" id="w0p-In-JDV"/>
+                <constraint firstItem="X06-G6-nJI" firstAttribute="top" secondItem="avf-We-tbw" secondAttribute="bottom" constant="8" id="yHd-GA-1i1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>

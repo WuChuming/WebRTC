@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController">
+            <connections>
+                <outlet property="button" destination="pet-jF-0BG" id="tYw-Nz-iQ4"/>
+                <outlet property="localView" destination="jZ7-uV-FSp" id="6FL-L3-9Mw"/>
+                <outlet property="remoteView" destination="8ym-l1-cQk" id="ILa-E7-6VR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWk-tQ-3RN">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                </view>
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-l1-cQk" customClass="RTCEAGLVideoView">
+                    <rect key="frame" x="0.0" y="20" width="414" height="842"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pet-jF-0BG">
+                    <rect key="frame" x="157" y="703" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.39607843139999999" green="0.56470588239999997" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="8nF-Au-c4z"/>
+                        <constraint firstAttribute="height" constant="100" id="Adc-4E-hIF"/>
+                    </constraints>
+                    <state key="normal" title="离开"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="Wea-Df-vQt"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZ7-uV-FSp" customClass="RTCCameraPreviewView">
+                    <rect key="frame" x="273" y="640" width="121" height="163"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="163" id="1dn-8C-x9n"/>
+                        <constraint firstAttribute="width" constant="121" id="1yQ-JA-WYW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="jZ7-uV-FSp" secondAttribute="trailing" constant="20" id="09m-rX-ylS"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="pet-jF-0BG" secondAttribute="bottom" constant="59" id="QO1-dc-Nnm"/>
+                <constraint firstItem="8ym-l1-cQk" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Qlp-Rd-3q5"/>
+                <constraint firstItem="uWk-tQ-3RN" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="RAY-DW-aU2"/>
+                <constraint firstItem="jZ7-uV-FSp" firstAttribute="bottom" secondItem="pet-jF-0BG" secondAttribute="bottom" id="RE5-5S-49M"/>
+                <constraint firstItem="8ym-l1-cQk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" id="acq-st-yZX"/>
+                <constraint firstAttribute="bottom" secondItem="uWk-tQ-3RN" secondAttribute="bottom" id="aiK-Ar-CLm"/>
+                <constraint firstItem="pet-jF-0BG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eyG-zC-hnt"/>
+                <constraint firstItem="uWk-tQ-3RN" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="hFH-g3-65i"/>
+                <constraint firstItem="uWk-tQ-3RN" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="j60-j1-BcW"/>
+                <constraint firstItem="8ym-l1-cQk" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="sB4-6S-fMt"/>
+                <constraint firstItem="8ym-l1-cQk" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="z6p-VE-htX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>
